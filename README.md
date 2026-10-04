@@ -73,3 +73,10 @@ upstream if you need to.
 - **Supported signed widths are 8, 16, 24, 32, 48, 64, 96, 128.** Other widths
   throw. The set is deliberately small to avoid implying semantic correctness
   for widths nobody uses in practice.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
