@@ -1,6 +1,6 @@
 {
   "name": "int-hex-string",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Converts unsigned integers to and from hexadecimal strings with configurable two's complement signed handling.",
   "type": "module",
   "main": "src/index.js",
